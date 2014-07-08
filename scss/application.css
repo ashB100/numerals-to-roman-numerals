@@ -1,3 +1,10 @@
+@media (max-width: 600px) {
+  html {
+    font-size: 95%; } }
+@media (max-width: 455px) {
+  html {
+    font-size: 80%; } }
+
 body {
   background: #ab1f28;
   text-align: center; }
@@ -6,15 +13,16 @@ h2 {
   text-shadow: 2px 2px 2px #fff; }
 
 .intro, .input-div, .output-div {
-  border-radius: 15px;
   background: #bc5a4b;
-  background: linear-gradient(#bc5a4b, #a1c6ff);
-  -webkit-box-shadow: 3px 5px 3px black;
-  -moz-box-shadow: 3px 5px 3px black;
+  border-radius: 15px;
   box-shadow: 3px 5px 3px black;
   color: #fff;
   font-size: 2rem;
-  font-weight: bold; }
+  font-weight: bold;
+  background: linear-gradient(#bc5a4b, #a1c6ff); }
+  @media (max-width: 600px) {
+    .intro, .input-div, .output-div {
+      font-size: 1.5rem; } }
 
 .intro {
   height: 70px;
@@ -22,20 +30,21 @@ h2 {
   background: linear-gradient(red, blue); }
 
 .input-div, .output-div {
-  margin-top: 15px;
+  margin-top: 16px;
   padding: 30px; }
   .input-div label, .output-div label {
     display: block;
     margin-bottom: 15px; }
-  .input-div .txt, .output-div .txt {
-    height: 36px;
-    border: rgba(0, 0, 0, 0.4);
+  .input-div .display, .output-div .display {
+    color: #333;
+    height: 30px;
     border-radius: 5px;
     background-color: #fff;
-    font-size: 1.5rem;
+    font-size: 1.4rem;
+    font-weight: 400;
     line-height: 1.6; }
 
-.convert-btn {
+.btn-div {
   margin-top: 30px;
   height: 50px;
   -webkit-transform: translate(44%, 0); }
@@ -50,6 +59,8 @@ h2 {
   border-right: 50px solid transparent;
   font-size: 0;
   line-height: 0; }
+  .btn:hover {
+    cursor: pointer; }
   .btn:before {
     content: '';
     display: block;
@@ -59,3 +70,12 @@ h2 {
     bottom: 50px;
     left: -18px;
     background: #222222; }
+  .btn:after {
+    content: "Convert";
+    position: absolute;
+    display: block;
+    top: -35px;
+    left: -26px;
+    font-size: 0.9375rem;
+    color: #fff;
+    text-shadow: 1px 1px 1px #00f; }
