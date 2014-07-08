@@ -2,24 +2,6 @@
  * Created by ashnita on 07/07/2014.
  */
 
-function validate(event){
-    var key = null;
-    if (window.event) {
-        key = event.keyCode;
-    } else {
-        key = event.which;
-    }
-    if (key < 48 || key > 57) {
-        if(key == 8)
-        {
-            return true;
-        }
-        else{
-            return false;
-        }
-    }
-}
-
 //Numeral Converter project
 function integerRoman(n){
     var table = [
@@ -50,9 +32,27 @@ function integerRoman(n){
 }
 
 function displayRomanNum() {
-    var inputVal = document.getElementById("tempInput").value;
+    var inputVal = document.getElementById("num-input").value;
     console.log(inputVal);
     if (inputVal != "") {
-        document.getElementById("tempOutput").value = integerRoman(inputVal);
+        document.getElementById("roman-num").value = integerRoman(inputVal);
+    }
+}
+
+function validate(event){
+    var key = null;
+    if (window.event) {
+        key = event.keyCode;
+    } else {
+        key = event.which;
+    }
+    if (key < 48 || key > 57) {
+        if(key == 8)
+        {
+            return true;
+        }
+        else{
+            return false;
+        }
     }
 }
