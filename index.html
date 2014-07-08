@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title></title>
+    <link href="scss/application.css" rel="stylesheet" type="text/css">
+    <script src="js/application.js"></script>
+</head>
+<body>
+    <div class="intro">
+        <h2>Numerical Converter</h2>
+    </div>
+    <div class="input-div">
+        <label>Numeral (1-9999)</label>
+        <input type="text" id="tempInput" placeholder="1234" class="txt" onkeypress="return validate(event)" maxlength="4" required min="1" max="9999">
+    </div>
+    <div class="convert-btn">
+        <a onclick="displayRomanNum()" class="btn"></a>
+    </div>
+    <div class="output-div">
+        <label>Roman Numeral</label>
+        <input type="text" id="tempOutput" value="MCCXXXIV" class="txt" disabled="disabled">
+    </div>
+</body>
+</html>

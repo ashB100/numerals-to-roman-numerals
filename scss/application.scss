@@ -1,0 +1,81 @@
+// settings
+$border-color: #222;
+$body-bg-color: #ab1f28;
+$box-bg-color: #bc5a4b;
+
+
+@mixin create-triangle($size, $color) {
+	width: 0;
+	height: 0;
+	border-top: $size solid $color;
+	border-left: $size solid transparent;
+	border-right: $size solid transparent;
+	font-size: 0;
+	line-height: 0;
+}
+
+body {
+	background: $body-bg-color;
+	text-align: center;
+}
+
+h2 {
+	text-shadow: 2px 2px 2px #fff;;
+}
+
+%box-styles {
+	border-radius: 15px;
+	background: $box-bg-color;
+	background: linear-gradient(#bc5a4b,  #a1c6ff);
+	-webkit-box-shadow: 3px 5px 3px black;
+	-moz-box-shadow: 3px 5px 3px black;
+	box-shadow: 3px 5px 3px black;
+	color: #fff;
+	font-size: 2rem;
+	font-weight: bold;
+}
+.intro {
+	@extend %box-styles;
+	height: 70px;
+	color: #333;
+	background: linear-gradient(#f00, #00f);
+}
+
+.input-div, .output-div {
+	@extend %box-styles;
+	margin-top: 15px;
+	padding: 30px;
+	label {
+		display: block;
+		margin-bottom: 15px;
+	}
+	.txt {
+		height: 36px;
+		border: rgba(0, 0, 0, 0.4);
+		border-radius: 5px;
+		background-color: #fff;
+		font-size: 1.5rem;
+		line-height: 1.6;
+	}
+}
+.convert-btn {
+	margin-top: 30px;
+	height: 50px;
+	-webkit-transform: translate(44%, 0);
+}
+
+.btn {
+	display: block;
+	position: relative;
+	@include create-triangle(50px, $border-color);
+	&:before {
+		content: '';
+		display: block;
+		position: absolute;
+		width: 40px;
+		height: 10px;
+		bottom: 50px;
+		left: -18px;
+		background: $border-color;
+	}
+}
