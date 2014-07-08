@@ -10,15 +10,15 @@
         <h2>Numerical Converter</h2>
     </div>
     <div class="input-div">
-        <label>Numeral (1-9999)</label>
-        <input type="text" id="tempInput" placeholder="1234" class="txt" onkeypress="return validate(event)" maxlength="4" required min="1" max="9999">
+        <label for="num-input">Enter a number between  1 - 9999:</label>
+        <input id="num-input" class="display" type="number" placeholder="1234" min="1" max="9999" onkeypress="return validate(event)" onblur="displayRomanNum()" required>
     </div>
-    <div class="convert-btn">
-        <a onclick="displayRomanNum()" class="btn"></a>
+    <div class="btn-div">
+        <a class="btn" onclick="displayRomanNum()"></a>
     </div>
     <div class="output-div">
-        <label>Roman Numeral</label>
-        <input type="text" id="tempOutput" value="MCCXXXIV" class="txt" disabled="disabled">
+        <label for="roman-num">Roman Numeral</label>
+        <input type="text" id="roman-num" value="MCCXXXIV" class="display" disabled="disabled">
     </div>
 </body>
 </html>
