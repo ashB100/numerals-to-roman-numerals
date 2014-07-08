@@ -52,7 +52,7 @@ function integerRoman(n){
 function displayRomanNum() {
     var inputVal = document.getElementById("tempInput").value;
     console.log(inputVal);
-    if (inputVal != undefined) {
+    if (inputVal != "") {
         document.getElementById("tempOutput").value = integerRoman(inputVal);
     }
 }
