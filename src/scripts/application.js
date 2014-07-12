@@ -34,7 +34,7 @@ function integerRoman(n){
 function displayRomanNum() {
     var inputVal = document.getElementById("num-input").value;
     console.log(inputVal);
-    if (inputVal != "") {
+    if (inputVal !== "") {
         document.getElementById("roman-num").value = integerRoman(inputVal);
     }
 }

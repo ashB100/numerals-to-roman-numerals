@@ -1,2 +1,4 @@
 # ignore IDEA project preferences
 .idea/
+.sass-cache
+node_modules/*
